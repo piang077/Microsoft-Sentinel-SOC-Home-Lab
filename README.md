@@ -53,6 +53,9 @@ Configured custom analytics rules in Microsoft Sentinel to detect suspicious act
 **Screenshot:**  
 Finds all newly created users in Entra ID and shows who created them and when.
 ![Analytics Rules](./screenshots/analytics_rules.png)
+![Analytics Rules](./screenshots/analytics_rules.png)
+![Analytics Rules](./screenshots/analytics_rules.png)
+
 
 ---
 
