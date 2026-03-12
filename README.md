@@ -25,13 +25,13 @@ The objective of this lab is to showcase practical skills in **security monitori
 
 ### 1. Data Connectors
 Connected various sources to Sentinel for comprehensive monitoring:
-- **Azure AD** – monitor user sign-ins, risky accounts, and privileged activity.  
+- **Microsoft Entra ID** – monitor user sign-ins, risky accounts, and privileged activity.  
 - **Office 365** – track email-based threats and suspicious activity.  
 - **Windows Security Events** – detect failed logins, account lockouts, and process anomalies.  
 - **Syslog/Linux Logs** – track critical system events.
 
 **Screenshot:**  
-![Data Connectors](./screenshots/connectors.png)
+![Data Connectors](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/connectorinstalled.png)
 
 ---
 
