@@ -36,12 +36,22 @@ Connected various sources to Sentinel for comprehensive monitoring:
 ---
 
 ### 2. Analytics & Detection Rules
-Configured **custom analytics rules** to detect potential threats:
-- Failed login attempts (**Low severity**)  
-- Multiple admin account logins from unusual locations (**Medium severity**)  
-- Malware or suspicious process execution (**High severity**)  
+Configured custom analytics rules in Microsoft Sentinel to detect suspicious activities and potential security threats.
 
+- **Failed Login Attempts (Low Severity)**  
+  Detects repeated authentication failures from the same user or IP address. This rule helps identify potential brute-force attempts or incorrect credential usage.
+
+- **New User Account Creation (Low Severity)**  
+  Monitors Entra ID audit logs for newly created user accounts. This detection helps identify unauthorised account provisioning or potential persistence mechanisms used by attackers.
+
+- **Multiple Admin Logins from Different Locations (Medium Severity)**  
+  Detects administrative accounts signing in from different geographic locations within a short period. This may indicate credential compromise or suspicious administrator activity.
+
+- **Suspicious Process Execution on Endpoint (High Severity)**  
+  Identifies potentially malicious processes such as PowerShell abuse, encoded commands, or unusual parent-child process relationships that may indicate malware execution or attacker activity.
+  
 **Screenshot:**  
+Finds all newly created users in Entra ID and shows who created them and when.
 ![Analytics Rules](./screenshots/analytics_rules.png)
 
 ---
