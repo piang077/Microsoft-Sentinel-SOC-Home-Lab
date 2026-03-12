@@ -19,7 +19,7 @@ The objective of this lab is to showcase practical skills in **security monitori
 **Diagram:**  
 *(Insert architecture diagram here – e.g., draw.io or Lucidchart export)*
 
-![Architecture Diagram](./screenshots/architecture.png)
+![Architecture Diagram](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/SentinelArchitecture.png)
 
 ---
 
