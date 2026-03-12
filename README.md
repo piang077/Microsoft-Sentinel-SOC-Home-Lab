@@ -95,4 +95,3 @@ This lab reflects a real-world SOC environment and demonstrates practical skills
 
 ---
 
-## Suggested Folder Structure for Repository
