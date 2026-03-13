@@ -102,18 +102,17 @@ A custom detection rule was created to detect **new user account creation** in M
    ![Incident Dashboard](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/incident2.png)
 
 6. **Validation**
-   Determine whether the activity was legitimate (e.g., normal user onboarding) or suspicious.
-   
-8. **Incident Resolution**
+* To confirm the alert represented legitimate activity:
+   * Confirmed that the newly created account was created by an authorised administrator.
+   * Verified that the administrator’s IP address matches expected login locations.
+   * Checked that the account creation aligns with normal administrative processes (e.g., user onboarding).
+![Incident Dashboard](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/incident3.png)
 
-   * If legitimate → close the incident as **Benign / False Positive**
-   * If suspicious → **escalate or trigger automated response** (e.g., disable account via playbook)
-
+Based on this validation, the activity was determined to be **legitimate administrative behaviour** related to normal user account management. The incident was therefore **closed as Benign / Expected Activity**.
 
 This scenario demonstrates how a SOC analyst investigates **identity-related alerts**, correlates logs, and determines whether the activity is legitimate or a potential security incident.
 
 **Screenshot:**  
-![Incident Dashboard](./screenshots/incidents.png)
 
 ---
 
