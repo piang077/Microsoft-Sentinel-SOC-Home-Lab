@@ -92,19 +92,19 @@ A custom detection rule was created to detect **new user account creation** in M
 
    * Read the **incident description and alert details**
    * Review **entities involved** (user)
-
+   ![Incident Dashboard](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/incident1.png)
 4. **Timeline Analysis**
-
    * Check the **time the incident was created**
    * Review related activities around the same timeframe
 
 5. **Log Investigation**
-   Query **AuditLogs** using KQL to identify who created the account and whether the action succeeded.
+   * Query **AuditLogs** using KQL to identify who created the account and whether the action succeeded.
+   ![Incident Dashboard](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/incident2.png)
 
 6. **Validation**
    Determine whether the activity was legitimate (e.g., normal user onboarding) or suspicious.
-
-7. **Incident Resolution**
+   
+8. **Incident Resolution**
 
    * If legitimate → close the incident as **Benign / False Positive**
    * If suspicious → **escalate or trigger automated response** (e.g., disable account via playbook)
