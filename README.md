@@ -63,10 +63,54 @@ Finds all newly created users in Entra ID and shows who created them and when.
 ---
 
 ### 3. Incident Management
-Simulated SOC incident workflow:
-- **Low severity**: investigate alerts for context, verify false positives.  
-- **Medium severity**: escalate incidents, perform deeper investigation, document findings.  
-- **High severity**: execute automated response via Sentinel playbooks (e.g., disable account, notify SOC team).
+
+Simulated SOC incident workflow using alerts generated in Microsoft Sentinel.
+
+**Severity Handling**
+
+* **Low severity** – Investigate alerts and verify false positives
+* **Medium severity** – Perform deeper log analysis and document findings
+* **High severity** – Trigger automated response using Sentinel playbooks (e.g., disable account, notify SOC team)
+
+#### Case Scenario: User Account Creation Alert
+
+A custom detection rule was created to detect **new user account creation** in Microsoft Entra ID. When a new account is added, Microsoft Sentinel generates an alert and automatically creates an incident.
+
+**SOC Investigation Process**
+
+1. **Alert Received**
+   An incident is generated in the Sentinel **Incidents dashboard**.
+
+2. **Initial Triage**
+
+   * Check the **incident severity level** (Low / Medium / High)
+   * **Assign the incident owner** for investigation
+   * Update the **incident status** ( New → Active)
+   ![Incident Dashboard](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/incident0.png)
+
+3. **Incident Review**
+
+   * Read the **incident description and alert details**
+   * Review **entities involved** (user)
+
+4. **Timeline Analysis**
+
+   * Check the **time the incident was created**
+   * Review related activities around the same timeframe
+
+5. **Log Investigation**
+   Query **AuditLogs** using KQL to identify who created the account and whether the action succeeded.
+
+6. **Validation**
+   Determine whether the activity was legitimate (e.g., normal user onboarding) or suspicious.
+
+7. **Incident Resolution**
+
+   * If legitimate → close the incident as **Benign / False Positive**
+   * If suspicious → **escalate or trigger automated response** (e.g., disable account via playbook)
+
+
+This scenario demonstrates how a SOC analyst investigates **identity-related alerts**, correlates logs, and determines whether the activity is legitimate or a potential security incident.
 
 **Screenshot:**  
 ![Incident Dashboard](./screenshots/incidents.png)
