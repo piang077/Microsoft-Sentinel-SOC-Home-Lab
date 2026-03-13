@@ -66,11 +66,9 @@ Finds all newly created users in Entra ID and shows who created them and when.
 
 Simulated SOC incident workflow using alerts generated in Microsoft Sentinel.
 
-**Severity Handling**
-
-* **Low severity** – Investigate alerts and verify false positives
-* **Medium severity** – Perform deeper log analysis and document findings
-* **High severity** – Trigger automated response using Sentinel playbooks (e.g., disable account, notify SOC team)
+* **Low severity** – Investigate alerts, verify false positives or Benign, and monitor.  
+* **Medium severity** – Perform deeper log analysis, document findings, and escalate if needed.  
+* **High severity** – Trigger predefined automated response using Sentinel playbooks (e.g., disable account, notify senior analyst or SOC team)
 
 #### Case Scenario: User Account Creation Alert
 
