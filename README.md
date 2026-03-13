@@ -10,7 +10,6 @@ The objective of this lab is to showcase practical skills in **security monitori
 ## Lab Architecture
 
 **Components:**
-- **Virtual Machines (Windows/Linux)** – generate security logs and simulate endpoint activity.  
 - **Azure Sentinel Workspace** – central SIEM for collecting and analyzing security data.  
 - **Connectors** – integrate Microsoft 365, Azure AD, Syslog, and custom logs.  
 - **Playbooks** – automate responses for detected threats.  
