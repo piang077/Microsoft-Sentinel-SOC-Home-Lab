@@ -102,17 +102,22 @@ A custom detection rule was created to detect **new user account creation** in M
    ![Incident Dashboard](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/incident2.png)
 
 6. **Validation**
-* To confirm the alert represented legitimate activity:
-   * Confirmed that the newly created account was created by an authorised administrator.
-   * Verified that the administrator’s IP address matches expected login locations.
-   * Checked that the account creation aligns with normal administrative processes (e.g., user onboarding).
-![Incident Dashboard](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/incident3.png)
+- To confirm the alert represented legitimate activity, the following was reviewed:
+- **Who:** The newly created account (`TargetUser`) and the authorised administrator (`InitiatingUser`) who created it.
+- **What:** Creation of a new user account in Entra ID.
+- **When:** Timestamp of the account creation (can be seen in the screenshot below).
+- **Where:** The account was created within the **Entra ID environment,
+- **Why:** Part of normal administrative process / user onboarding.
+- **How:** Administrator performed the action using standard Entra ID console or admin tools; operation succeeded with no anomalies.
 
+![Incident Dashboard](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/incident3.png)
+**Conclusion:**  
 Based on this validation, the activity was determined to be **legitimate administrative behaviour** related to normal user account management. The incident was therefore **closed as Benign / Expected Activity**.
+![Incident Dashboard](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/incident4.png)
+
+
 
 This scenario demonstrates how a SOC analyst investigates **identity-related alerts**, correlates logs, and determines whether the activity is legitimate or a potential security incident.
-
-**Screenshot:**  
 
 ---
 
