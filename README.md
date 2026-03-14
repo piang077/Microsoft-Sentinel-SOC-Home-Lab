@@ -10,7 +10,7 @@ The objective of this lab is to showcase practical skills in **security monitori
 ## Lab Architecture
 
 **Components:**
-- **Azure Sentinel Workspace** – central SIEM for collecting and analyzing security data.  
+- **Azure Sentinel Workspace** – central SIEM for collecting and analysing security data.  
 - **Connectors** – integrate Microsoft 365, Azure AD, Syslog, and custom logs.  
 - **Playbooks** – automate responses for detected threats.  
 - **Workbooks & Dashboards** – visualize alerts and incidents for SOC monitoring.
