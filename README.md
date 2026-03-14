@@ -125,8 +125,19 @@ UEBA helps identify **anomalous behaviour** by creating behavioural baselines fo
 
 
 
-### 5. Automation with Playbooks
-Implemented **playbooks** to improve SOC efficiency:
+### 5. Automation & Playbooks
+- Created an automation rule in Microsoft Sentinel to streamline incident handling.
+**Rule Name:** New User Automation  
+**Trigger:**  
+- Activated when an incident is generated for **new user creation in Entra ID**.
+**Automated Actions:**
+- **Change Incident Status** → Set to *Active*
+- **Update Severity** → Set to *High*
+- **Assign Owner** → Assigned to the SOC analyst (myself) for investigation
+
+![createautorule](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/createautorule.png)
+![succeedautorule](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/Succeedautorule.png)
+
 - Trigger email notifications for medium/high severity alerts.  
 - Automatically disable accounts flagged as compromised.  
 - Send alerts to Microsoft Teams for SOC collaboration.
