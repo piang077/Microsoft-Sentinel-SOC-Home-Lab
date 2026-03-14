@@ -156,13 +156,6 @@ This playbook helps SOC analysts quickly determine whether an IP address involve
 ![Playbook Example](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/createplaybook.png)
 ![Playbook Example](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/logicapp.png)
 
-- Trigger email notifications for medium/high severity alerts.  
-- Automatically disable accounts flagged as compromised.  
-- Send alerts to Microsoft Teams for SOC collaboration.
-
-**Screenshot:**  
-![Playbook Example](./screenshots/playbook.png)
-
 ---
 
 ### 5. Workbooks & Dashboards
