@@ -138,6 +138,24 @@ UEBA helps identify **anomalous behaviour** by creating behavioural baselines fo
 ![createautorule](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/createautorule.png)
 ![succeedautorule](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/Succeedautorule.png)
 
+### Playbook Automation – VirusTotal Threat Intelligence
+
+Installed the **VirusTotal connector** from the Microsoft Sentinel **Content Hub** to enrich incident investigations with external threat intelligence.
+
+**Playbook Name:** `Get-VirusTotalIPReport-IncidentTriggered`
+
+**Functionality:**
+- Extracts **IP address entities** associated with the incident.
+- Queries **VirusTotal** for threat intelligence information related to the IP address.
+- Retrieves details such as reputation, malicious detections, and analysis results.
+
+**Automated Actions:**
+- Writes the VirusTotal analysis results to **Log Analytics**.
+- Adds a **comment to the incident** with the enriched threat intelligence data.
+This playbook helps SOC analysts quickly determine whether an IP address involved in an incident is **malicious or suspicious**, enabling faster and more informed investigations.
+![Playbook Example](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/createplaybook.png)
+![Playbook Example](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/logicapp.png)
+
 - Trigger email notifications for medium/high severity alerts.  
 - Automatically disable accounts flagged as compromised.  
 - Send alerts to Microsoft Teams for SOC collaboration.
