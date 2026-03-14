@@ -1,7 +1,7 @@
 # Microsoft Sentinel Home Lab – SOC & Threat Detection 
 
 ## Project Overview
-This project demonstrates a hands-on cybersecurity lab using **Microsoft Sentinel** to simulate a Security Operations Center (SOC) environment. The lab focuses on **threat detection, alerting, incident investigation, and automated response** in a cloud-based SIEM environment.  
+This project demonstrates a hands-on cybersecurity lab using **Microsoft Sentinel** to simulate a Security Operations Center (SOC) environment. The lab focuses on **threat detection, alerting, incident investigation, user and entity behavior analysis, and automated response** in a cloud-based SIEM environment.  
 
 The objective of this lab is to showcase practical skills in **security monitoring, alert triage, and incident response**, reflecting real-world cybersecurity workflows.
 
@@ -115,7 +115,17 @@ This scenario demonstrates how a SOC analyst investigates **identity-related ale
 
 ---
 
-### 4. Automation with Playbooks
+### 4. User and Entity Behavior Analytics (UEBA)
+
+Enabled **User and Entity Behavior Analytics (UEBA)** in Microsoft Sentinel to enhance threat detection by analysing user and entity activity patterns.
+
+UEBA helps identify **anomalous behaviour** by creating behavioural baselines for users, devices, and other entities. Sentinel then applies machine learning to detect activities that deviate from normal patterns.
+![UEBA Turn On](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/turnonueba.png)
+![UEBA Rule](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/prebuiltuebarule.png)
+
+
+
+### 5. Automation with Playbooks
 Implemented **playbooks** to improve SOC efficiency:
 - Trigger email notifications for medium/high severity alerts.  
 - Automatically disable accounts flagged as compromised.  
