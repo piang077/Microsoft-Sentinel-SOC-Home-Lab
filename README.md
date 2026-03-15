@@ -158,14 +158,16 @@ This playbook helps SOC analysts quickly determine whether an IP address involve
 
 ---
 
-### 5. Workbooks & Dashboards
-Created dashboards to visualize security posture and trends:
-- Alert overview by severity and source  
+### 5. Workbooks & Dashboards ( New or Template)
+Created dashboards to visualize security posture and trends :
+- Alert overview by severity 
 - User activity reports  
 - Incident summary for SOC monitoring
 
 **Screenshot:**  
-![Dashboard Example](./screenshots/dashboard.png)
+![Dashboard Example](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/workbook.png)
+![Dashboard Example](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/workbooktemplate.png)
+
 
 ---
 
