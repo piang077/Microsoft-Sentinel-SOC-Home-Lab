@@ -11,7 +11,7 @@ The objective of this lab is to showcase practical skills in **security monitori
 
 **Components:**
 - **Azure Sentinel Workspace** – central SIEM for collecting and analysing security data.  
-- **Connectors** – integrate Microsoft 365, Azure AD, Syslog, and custom logs.  
+- **Connectors** – Azure AD, Microsoft defender XDR.  
 - **Playbooks** – automate responses for detected threats.  
 - **Workbooks & Dashboards** – visualize alerts and incidents for SOC monitoring.
 
@@ -24,13 +24,13 @@ The objective of this lab is to showcase practical skills in **security monitori
 
 ### 1. Data Connectors
 Connected various sources to Sentinel for comprehensive monitoring:
-- **Microsoft Entra ID** – monitor user sign-ins, risky accounts, and privileged activity.  
-- **Office 365** – track email-based threats and suspicious activity.  
-- **Windows Security Events** – detect failed logins, account lockouts, and process anomalies.  
-- **Syslog/Linux Logs** – track critical system events.
+- **Microsoft Entra ID** – monitor user sign-ins, risky accounts, and privileged activity.
+- **Microsoft Defender XDR & Azure Activity Logs** – collected endpoint and cloud events for threat detection and investigation.
+
+
 
 **Screenshot:**  
-![Data Connectors](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/connectorinstalled.png)
+![Data Connectors](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/sentinelconnector.png)
 
 ---
 
