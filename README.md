@@ -150,11 +150,10 @@ Installed the **VirusTotal connector** from the Microsoft Sentinel **Content Hub
 - Retrieves details such as reputation, malicious detections, and analysis results.
 
 **Automated Actions:**
-- Writes the VirusTotal analysis results to **Log Analytics**.
 - Adds a **comment to the incident** with the enriched threat intelligence data.
 This playbook helps SOC analysts quickly determine whether an IP address involved in an incident is **malicious or suspicious**, enabling faster and more informed investigations.
-![Playbook Example](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/createplaybook.png)
-![Playbook Example](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/logicapp.png)
+![Playbook Example](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/virustotalsuccess.png)
+![Playbook Example](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/commentsuccess.png)
 
 ---
 
