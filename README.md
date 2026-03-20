@@ -1,7 +1,7 @@
 # Microsoft Sentinel Home Lab – SOC & Threat Detection 
 
 ## Project Overview
-This project demonstrates a hands-on cybersecurity lab using **Microsoft Sentinel** to simulate a Security Operations Center (SOC) environment. The lab focuses on **threat detection, alerting, incident investigation, user and entity behavior analysis, and automated response** in a cloud-based SIEM environment.  
+This project demonstrates a hands-on cybersecurity lab using **Microsoft Sentinel** to simulate a Security Operations Center (SOC) environment. The lab focuses on **threat detection, alerting, incident investigation, user and entity behavior analysis, creating detection rules and automated response** in a cloud-based SIEM environment.  
 
 The objective of this lab is to showcase practical skills in **security monitoring, alert triage, and incident response**, reflecting real-world cybersecurity workflows.
 
