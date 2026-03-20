@@ -173,12 +173,15 @@ Installed the **VirusTotal connector** from the Microsoft Sentinel **Content Hub
 This playbook helps SOC analysts quickly respond to incidents involving **malicious files**, ensuring **rapid escalation and investigation** by the appropriate senior personnel.
 
 **Before Running Playbook** 
+
+
 ![Playbook Example](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/suspiciousfiledownload3.png)  
 
 **After Running Playbook** 
+
+
 ![Playbook Example](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/afterplaybookrunupdateincident.png)
 
-**Logic App** 
 ![Playbook Example](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/virustotalprocesslogicapp.png)
 
 
