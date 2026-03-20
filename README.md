@@ -41,10 +41,10 @@ Configured custom analytics rules in Microsoft Sentinel to detect suspicious act
   Detects repeated authentication failures from the same user or IP address. This rule helps identify potential brute-force attempts or incorrect credential usage.
 
 - **New User Account Creation (Medium Severity)**  
-  Monitors Entra ID audit logs for newly created user accounts. This detection helps identify unauthorised account provisioning or potential persistence mechanisms used by attackers.
+  Monitors Entra ID audit logs for newly created user accounts. This detection helps identify unauthorised account provisioning or potential persistence    mechanisms used by attackers.
 
-- **Suspicious Process Execution on Endpoint (High Severity)**  
-  Identifies potentially malicious processes such as PowerShell abuse, encoded commands, or unusual parent-child process relationships that may indicate malware execution or attacker activity.
+- **Malicious File Download on Endpoint (High Severity)**  
+  Detects the download of files confirmed to contain malware or viruses on endpoints. This includes files that may compromise the system, steal credentials, or allow attacker activity, enabling SOC teams to quickly escalate and respond.
   
 **Screenshot:**  
 Finds all newly created users in Entra ID and shows who created them and when.
@@ -54,7 +54,11 @@ Finds all newly created users in Entra ID and shows who created them and when.
 ![Analytics Rules](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/analyticnearrealtime.png)
 ![Analytics Rules](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/analyticwizardquerytest.png)
 
-
+**Screenshot:**  
+Displays the detection of the malicious file download on the endpoint, highlighting the **file name, hash (SHA256), Host, and user account** involved.
+![Playbook Example](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/suspiciousfiledownload1.png)  
+![Playbook Example](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/suspiciousfiledownload2.png)
+![Playbook Example](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/suspiciousfiledownload2.1.png)
 
 ---
 
@@ -152,13 +156,30 @@ UEBA helps identify **anomalous behaviour** by creating behavioural baselines fo
 ### Playbook Automation – VirusTotal Threat Intelligence
 
 Installed the **VirusTotal connector** from the Microsoft Sentinel **Content Hub** to enrich incident investigations with external threat intelligence.
+# Playbook: Get-VirusTotalFileHashReport-IncidentTriggered
+
+**Functionality:**  
+- Extracts **file hash entities** (SHA256) associated with the incident.  
+- Queries **VirusTotal** for threat intelligence information related to the file hash.  
+- Retrieves **reputation score**.  
+
+**Automated Actions:**  
+- **Assigns the incident** to **Senior Analyst** for investigation.  
+- **Escalates the incident** to the senior team.  
+- **Adds a comment** to the incident with the enriched threat intelligence data from VirusTotal.  
+- **Changes the incident status** to **Active**.  
+
+This playbook helps SOC analysts quickly respond to incidents involving **malicious files**, ensuring **rapid escalation and investigation** by the appropriate senior personnel.
+
+![Playbook Example](.png)  
+![Playbook Example](png)
 
 **Playbook Name:** `Get-VirusTotalIPReport-IncidentTriggered`
 
 **Functionality:**
 - Extracts **IP address entities** associated with the incident.
 - Queries **VirusTotal** for threat intelligence information related to the IP address.
-- Retrieves details such as reputation, malicious detections, and analysis results.
+- Retrieves reputation.
 
 **Automated Actions:**
 - Adds a **comment to the incident** with the enriched threat intelligence data.
