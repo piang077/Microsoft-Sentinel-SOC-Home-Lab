@@ -120,7 +120,7 @@ A custom detection rule was created to detect **new user account creation** in M
 - **How:** Administrator performed the action using standard Entra ID console or admin tools; operation succeeded with no anomalies.
 
 ![Incident Dashboard](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/incident3.png)
-**Conclusion:**  
+7. **Conclusion:**  
 Based on this validation, the activity was determined to be **legitimate administrative behaviour** related to normal user account management. The incident was therefore **closed as Benign / Expected Activity**.
 ![Incident Dashboard](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/incident4.png)
 
@@ -153,9 +153,10 @@ UEBA helps identify **anomalous behaviour** by creating behavioural baselines fo
 ![createautorule](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/createautorule.png)
 ![succeedautorule](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/Succeedautorule.png)
 
-### Playbook Automation – VirusTotal Threat Intelligence
+# Playbook Automation – VirusTotal Threat Intelligence
 
 Installed the **VirusTotal connector** from the Microsoft Sentinel **Content Hub** to enrich incident investigations with external threat intelligence.
+
 # Playbook: Get-VirusTotalFileHashReport-IncidentTriggered
 
 **Functionality:**  
@@ -171,8 +172,15 @@ Installed the **VirusTotal connector** from the Microsoft Sentinel **Content Hub
 
 This playbook helps SOC analysts quickly respond to incidents involving **malicious files**, ensuring **rapid escalation and investigation** by the appropriate senior personnel.
 
-![Playbook Example](.png)  
-![Playbook Example](png)
+**Before Running Playbook** 
+![Playbook Example](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/suspiciousfiledownload3.png)  
+
+**After Running Playbook** 
+![Playbook Example](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/afterplaybookrunupdateincident.png)
+
+**Logic App** 
+![Playbook Example](https://github.com/piang077/Microsoft-Sentinel-SOC-Home-Lab/blob/main/ScreenShots/virustotalprocesslogicapp.png)
+
 
 **Playbook Name:** `Get-VirusTotalIPReport-IncidentTriggered`
 
@@ -189,7 +197,7 @@ This playbook helps SOC analysts quickly determine whether an IP address involve
 
 ---
 
-### 5. Workbooks & Dashboards ( New or Template)
+### 6. Workbooks & Dashboards ( New or Template)
 Created dashboards to visualize security posture and trends :
 - Alert overview by severity 
 - User activity reports  
