@@ -66,6 +66,17 @@ Simulated SOC incident workflow using alerts generated in Microsoft Sentinel.
 * **Medium severity** – Perform deeper log analysis, document findings, and escalate if needed.  
 * **High severity** – Trigger predefined automated response using Sentinel playbooks (e.g., disable account, notify senior analyst or SOC team)
 
+### Alert Triage Approach
+
+When triaging security alerts, I focus on four key factors to efficiently assess risk and prioritise response efforts:
+
+- **Severity** – Evaluate how critical the alert is to determine potential impact  
+- **Timestamp** – Review when the activity occurred to understand if it is ongoing or historical  
+- **Affected Entities** – Identify the users, devices, or systems involved  
+- **Attack Stage** – Map the activity to the MITRE ATT&CK lifecycle to understand attacker intent  
+
+By applying this structured approach, I can reduce alert fatigue, quickly filter out low-risk events, and prioritise high-impact threats for investigation.
+
 #### Case Scenario: User Account Creation Alert
 
 A custom detection rule was created to detect **new user account creation** in Microsoft Entra ID. When a new account is added, Microsoft Sentinel generates an alert and automatically creates an incident.
